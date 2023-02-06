@@ -1,0 +1,25 @@
+{
+  "name": "abouchahineabdallah_imd3901_a2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2/issues"
+  },
+  "homepage": "https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2#readme",
+  "dependencies": {
+    "aframe-animation-component": "^5.1.2",
+    "express": "^4.18.2",
+    "node": "^19.6.0"
+  }
+}
