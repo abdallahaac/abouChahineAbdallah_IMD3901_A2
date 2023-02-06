@@ -14,11 +14,13 @@ AFRAME.registerComponent("grab-ducks", {
 				// not all spawining in the same space
 				// generate random values for x and z
 				// return Math.random() * (max - min) + min;
-				let x = Math.random() * (1.503 - 0.503) + 1.503;
-				let z = Math.random() * (0.348 + 2.114) - 2.114;
-				let y = Math.random() * (0.222 - 2.77) - 2.77;
+				let x = Math.random() * (1.467 - 0.754) + 0.754;
+				let z = Math.random() * (-2 - -0.5) + 0.5;
+
+				console.log("x: " + x + " y: " + z);
+
 				// set component values
-				entity.setAttribute("position", { x: x - 0.8, y: 0.116, z: z - 1 });
+				entity.setAttribute("position", { x: x - 0.8, y: 0.116, z: z - 1.3 });
 				entity.setAttribute("rotation", { x: -180.0, y: 31.355, z: -180.0 });
 				entity.setAttribute("scale", { x: 0.2, y: 0.2, z: 0.2 });
 
