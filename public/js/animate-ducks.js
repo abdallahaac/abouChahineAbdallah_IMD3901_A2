@@ -1,4 +1,4 @@
-AFRAME.registerComponent("grab-ducks", {
+AFRAME.registerComponent("animate-ducks", {
 	init: function () {
 		let duck = this.el;
 		duck.addEventListener("animationcomplete__2", function () {
@@ -31,18 +31,15 @@ AFRAME.registerComponent("grab-ducks", {
 				document.querySelector("a-scene").appendChild(entity);
 			}
 		});
-		duck.addEventListener("click", function () {
-			sound = "src:#vending-noise; on:click";
+		duck.setAttribute("sound", "src:#quacking; on:click");
 
-			duck.setAttribute(
-				"animation__1",
-				"property:position;dur:2000; from: 0.932 -5.108 2.525; to: 0.932 -0.03 11.458;easing:easeInOutCubic; startEvents:click;"
-			);
-			duck.setAttribute(
-				"animation__2",
-				"property:position;dur:2000; from: 0.932 -0.03 11.458;; to: -6.107 -4.786 21.280; easing:easeInOutCubic; startEvents:animationcomplete__1;"
-			);
-			duck.setAttribute("sound", "src:#quacking; on:click");
-		});
+		duck.setAttribute(
+			"animation__1",
+			"property:position;dur:2000; from: 0.932 -5.108 2.525; to: 0.932 -0.03 11.458;easing:easeInOutCubic; startEvents:click;"
+		);
+		duck.setAttribute(
+			"animation__2",
+			"property:position;dur:2000; from: 0.932 -0.03 11.458;; to: -6.107 -4.786 21.280; easing:easeInOutCubic; startEvents:animationcomplete__1;"
+		);
 	},
 });
