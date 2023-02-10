@@ -1,13 +1,19 @@
 AFRAME.registerComponent("move-on-click", {
 	init: function () {
-		let scene = this.el;
-		let player = document.getElementById("player");
+		let background = document.getElementById("background");
 
-		scene.addEventListener("click", () => {
-			if (!player.getAttribute("wasd-controls")) {
-				player.setAttribute("wasd-controls", "");
-				console.log(player);
+		let audio = document.querySelector("#button1");
+		let playing = false;
+
+		document.addEventListener("click", () => {
+			background.remove();
+			if (!playing) {
+				audio.play();
+			} else {
+				audio.pause();
+				audio.currentTime = 0;
 			}
+			playing = true;
 		});
 	},
 });

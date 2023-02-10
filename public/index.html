@@ -31,6 +31,30 @@
 					border: 6px solid white;
 					box-shadow: rgba(3, 35, 17, 0.5) 3px 1px 5px;
 				}
+				#background {
+					position: absolute;
+					z-index: 101;
+					background-color: #ffffff4f;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				.click-btn {
+					font-family: sans-serif;
+					font-size: 70px;
+					color: #ffff;
+					background-color: rgb(163, 67, 34);
+					padding: 10px;
+					margin: 5px 10px;
+					border-radius: 6px;
+					border: 6px solid white;
+					box-shadow: rgba(3, 35, 17, 0.5) 3px 1px 5px;
+					opacity: 1;
+					z-index: 200;
+					cursor: pointer;
+				}
 			}
 			@media screen and (max-width: 992px) {
 				span {
@@ -50,17 +74,50 @@
 					box-shadow: rgba(3, 35, 17, 0.5) 3px 1px 5px;
 					width: 190px;
 				}
+				#background {
+					position: absolute;
+					z-index: 101;
+					background-color: #ffffff4f;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				#click-btn {
+					font-family: sans-serif;
+					font-size: 40px;
+					color: #ffff;
+					background-color: rgb(163, 67, 34);
+					padding: 10px;
+					margin: 5px 10px;
+					border-radius: 6px;
+					border: 6px solid white;
+					box-shadow: rgba(3, 35, 17, 0.5) 3px 1px 5px;
+					opacity: 1;
+					z-index: 200;
+					cursor: pointer;
+				}
 			}
 		</style>
 		<!-- Scene definition -->
+
 		<a-scene
 			physics="enabled: true"
 			cursor="rayOrigin: mouse"
 			renderer="antialias: true"
-			sound="src: #rainforest; on: click; loop: true; volume: 0.2; rolloffFactor: 0"
 			environment="preset: forest; groundTexture: walkernoise; fog: 0.9"
 			move-on-click
+			sound="src: #rainforest; on:click; loop: true; volume: 0.2; rolloffFactor: 0"
 		>
+			<div
+				class=""
+				id="background"
+				sound="src: #button1; on: click; poolSize: 3"
+			>
+				<div class="click-btn" id="click-btn">Click to play !</div>
+			</div>
+
 			<span id="score">SCORE:</span>
 			<!-- Environment -->
 			<a-entity id="environment" environment="preset:forest;"></a-entity>
@@ -72,7 +129,7 @@
 			<a-assets>
 				<a-asset-item id="duck" src="/assets/Duck.glb"></a-asset-item>
 			</a-assets>
-
+			<!-- audio ...  -->
 			<a-assets>
 				<audio
 					id="vending-noise"
@@ -85,7 +142,11 @@
 			<a-assets>
 				<audio id="quack" src="/assets/quack.mp3"></audio>
 			</a-assets>
-
+			<audio
+				id="button1"
+				src="//cdn.rawgit.com/michaelnebeling/src/master/button-1.mp3"
+				crossorigin="anonymous"
+			></audio>
 			<audio
 				id="rainforest"
 				src="//cdn.rawgit.com/michaelnebeling/src/master/rainforest_ambience-GlorySunz-1938133500.mp3"
@@ -96,6 +157,7 @@
 			<a-entity
 				id="player"
 				camera
+				wasd-controls
 				twoway-motion="speed:10; nonMobileLoad:false;"
 				look-controls
 				position="5 2 10.040"
