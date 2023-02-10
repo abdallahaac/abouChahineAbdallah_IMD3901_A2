@@ -10,6 +10,7 @@
 		<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
 		<script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
 
+		<script src="./js/moveOnClick.js"></script>
 		<script src="./js/instantiateDucks.js"></script>
 		<script src="./js/animate-ducks.js"></script>
 		<script src="./js/quack.js"></script>
@@ -56,6 +57,9 @@
 			physics="enabled: true"
 			cursor="rayOrigin: mouse"
 			renderer="antialias: true"
+			sound="src: #rainforest; on: click; loop: true; volume: 0.2; rolloffFactor: 0"
+			environment="preset: forest; groundTexture: walkernoise; fog: 0.9"
+			move-on-click
 		>
 			<span id="score">SCORE:</span>
 			<!-- Environment -->
@@ -81,12 +85,18 @@
 			<a-assets>
 				<audio id="quack" src="/assets/quack.mp3"></audio>
 			</a-assets>
+
+			<audio
+				id="rainforest"
+				src="//cdn.rawgit.com/michaelnebeling/src/master/rainforest_ambience-GlorySunz-1938133500.mp3"
+				crossorigin="anonymous"
+			></audio>
+
 			<!-- Player entity -->
 			<a-entity
 				id="player"
 				camera
 				twoway-motion="speed:10; nonMobileLoad:false;"
-				wasd-controls
 				look-controls
 				position="5 2 10.040"
 			>
