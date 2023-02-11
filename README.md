@@ -29,7 +29,7 @@ https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2
 
 ## Demo
 ![](https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2/blob/main/public/assets/demo-1.gif)
-![](https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2/blob/main/demo-2.gif)
+![](https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2/blob/main/public/assets/demo-2.gif
 
 
 
