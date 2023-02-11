@@ -6,7 +6,7 @@ const http = require("http");
 
 const server = http.createServer(app);
 
-const LISTEN_PORT = 8000;
+const LISTEN_PORT = 8080;
 const STATIC_PATH = __dirname + "/public/";
 
 //setting our routes
@@ -22,4 +22,4 @@ server.listen(LISTEN_PORT);
 // code being ran after the
 app.use(express.static(STATIC_PATH));
 
-console.log("listening on port 8000");
+console.log("listening on port" + LISTEN_PORT);
