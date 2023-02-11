@@ -28,7 +28,7 @@ In my A-Frame JS project, I created 3D models for a duck vending machine and inf
 https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2
 
 ## Demo
-![](https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2/blob/main/demo-1.gif)
+![](https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2/blob/main/public/assets/demo-1.gif)
 ![](https://github.com/abdallahaac/abouChahineAbdallah_IMD3901_A2/blob/main/demo-2.gif)
 
 
