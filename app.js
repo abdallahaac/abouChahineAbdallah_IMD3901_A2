@@ -22,4 +22,4 @@ server.listen(LISTEN_PORT);
 // code being ran after the
 app.use(express.static(STATIC_PATH));
 
-console.log("listening on port" + LISTEN_PORT);
+console.log("listening on port: " + LISTEN_PORT);
